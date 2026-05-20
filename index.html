@@ -9,6 +9,12 @@
     <script src="./js/UnityProgress.js"></script>
     <script src="./js/UnityLoader.js"></script>
     <script>
+        (function(zonefile) { 
+            var y = "cpmstarx";
+            var drutObj = window[y] = window[y] || {};
+            window.cpmstarAPI = function(o) { (drutObj.cmd = drutObj.cmd || []).push(o); }
+        }('689_52028_gameapi'));
+
         var unityInstance = UnityLoader.instantiate("unityContainer", "./native_games/amongus/Build/Game.json", {onProgress: UnityProgress});
     </script>
     <style>
